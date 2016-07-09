@@ -1,6 +1,11 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 
+'''
+@author : Debapriya Das
+@topic : Whatsapp Data Mining
+'''
+
 
 import codecs
 import re
@@ -25,7 +30,7 @@ def open_file(filename):
     return raw_messages
 
 
-regex_string = ur'(?P<DateTime>(Jan(uary)?|Feb(ruary)?|Mar(ch)?|Apr(il)?|May|Jun(e)?|Jul(y)?|Aug(ust)?|Sep(tember)?|Oct(ober)?|Nov(ember)?|Dec(ember)?)\s+\d{1,2}\,\s{0,1}((1[0-2]|0?[1-9]):([0-5][0-9]) ([AaPp][Mm]))\s{0,1}\-\s{0,1})(?P<name>\+\(?\d{2,4}\)?[\d\s-]{3,}|\w+(?::\s*\w+)*|[\w\s]+?)(?:\s+(?P<action>joined|left|was removed|(?:created group \"\w+\")|changed the (?:subject to â€œ\w+â€|group icon))|\:\s(?P<message>(?:.+|\n(?!\n))+))'
+regex_string = ur'(?P<DateTime>(Jan(uary)?|Feb(ruary)?|Mar(ch)?|Apr(il)?|May|Jun(e)?|Jul(y)?|Aug(ust)?|Sep(tember)?|Oct(ober)?|Nov(ember)?|Dec(ember)?)\s+\d{1,2}\,\s{0,1}((1[0-2]|0?[1-9]):([0-5][0-9]) ([AaPp][Mm]))\s{0,1}\-\s{0,1})(?P<name>\+\(?\d{2,4}\)?[\d\s-]{3,}|\w+(?::\s*\w+)*|[\w\s]+?)(?:\s+(?P<action>joined|left|was removed|(?:created group â€œ\\w+â€)|changed the (?:subject to â€œ\w+â€|group icon))|\:\s(?P<message>(?:.+|\n(?!\n))+))'
 
 data_format = re.compile(regex_string)
 

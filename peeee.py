@@ -1,0 +1,1 @@
+(?P<datetime>\d{2}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2}): (?P<name>\w+(?::\s*\w+)*|[\w\s]+?)(?:\s+(?P<action>joined|left|was removed|changed the (?:subject to â€œ\w+â€|group icon))|:\s(?P<message>(?:.+|\n(?!\n))+))
